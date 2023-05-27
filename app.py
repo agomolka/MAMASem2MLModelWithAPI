@@ -36,7 +36,7 @@ app = Flask(__name__)
 
 
 # Create an API end point
-@app.route('/rta/predict', methods=['GET'])
+@app.route('/rta/v1.0/predict', methods=['GET'])
 def get_prediction():
     sepal_length = float(request.args.get('sl'))
     petal_length = float(request.args.get('pl'))
@@ -54,4 +54,4 @@ def get_prediction():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=9999)
